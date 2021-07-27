@@ -24,7 +24,7 @@
 				'<!@(env PKG_CONFIG_SYSROOT_DIR=/home pkg-config gstreamer-1.0 --libs)',
 				'<!@(pkg-config gstreamer-app-1.0 --libs)',
 				'<!@(env PKG_CONFIG_SYSROOT_DIR=/home pkg-config gstreamer-app-1.0 --libs)',
-				'<!@(pkg-config gstreamer-video-1.0 --libs)'
+				'<!@(pkg-config gstreamer-video-1.0 --libs)',
 				'<!@(env PKG_CONFIG_SYSROOT_DIR=/home pkg-config gstreamer-video-1.0 --libs)'
 			]
 		}],
