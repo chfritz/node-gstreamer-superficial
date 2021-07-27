@@ -12,26 +12,26 @@
 	  "conditions" : [
 		["OS=='linux'", {
 			"include_dirs": [
-				'<!@(pkg-config gstreamer-1.0 --cflags-only-I --define-prefix | sed s/-I//g)',
-				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I --define-prefix | sed s/-I//g)',
-				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I --define-prefix | sed s/-I//g)'
+				'<!@(pkg-config gstreamer-1.0 --cflags-only-I | sed s/-I//g && env PKG_CONFIG_SYSROOT_DIR=/home/transitive pkg-config gstreamer-1.0 --cflags-only-I | sed s/-I//g)',
+				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I | sed s/-I//g)',
+				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I | sed s/-I//g)'
 			],
 			"libraries": [
-				'<!@(pkg-config gstreamer-1.0 --libs --define-prefix)',
-				'<!@(pkg-config gstreamer-app-1.0 --libs --define-prefix)',
-				'<!@(pkg-config gstreamer-video-1.0 --libs --define-prefix)'
+				'<!@(pkg-config gstreamer-1.0 --libs && env PKG_CONFIG_SYSROOT_DIR=/home/transitive pkg-config gstreamer-1.0 --libs)',
+				'<!@(pkg-config gstreamer-app-1.0 --libs)',
+				'<!@(pkg-config gstreamer-video-1.0 --libs)'
 			]
 		}],
 		["OS=='mac'", {
 			"include_dirs": [
-				'<!@(pkg-config gstreamer-1.0 --cflags-only-I --define-prefix | sed s/-I//g)',
-				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I --define-prefix | sed s/-I//g)',
-				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I --define-prefix | sed s/-I//g)'
+				'<!@(pkg-config gstreamer-1.0 --cflags-only-I | sed s/-I//g)',
+				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I | sed s/-I//g)',
+				'<!@(pkg-config gstreamer-app-1.0 --cflags-only-I | sed s/-I//g)'
 			],
 			"libraries": [
-				'<!@(pkg-config gstreamer-1.0 --libs --define-prefix)',
-				'<!@(pkg-config gstreamer-app-1.0 --libs --define-prefix)',
-				'<!@(pkg-config gstreamer-video-1.0 --libs --define-prefix)'
+				'<!@(pkg-config gstreamer-1.0 --libs)',
+				'<!@(pkg-config gstreamer-app-1.0 --libs)',
+				'<!@(pkg-config gstreamer-video-1.0 --libs)'
 			]
 		}],
 		["OS=='win'", {
