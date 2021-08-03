@@ -1,17 +1,12 @@
 {
-  "name": "gstreamer-superficial",
-  "version": "1.6.0",
-  "description": "Superficial GStreamer binding",
+  "name": "gstreamer-superficial-transitive",
+  "version": "1.6.1",
+  "description": "Superficial GStreamer binding; modified for use by Transitive Robotics",
   "author": {
-    "name": "Daniel Turing",
-    "email": "mail@danielturing.com",
-    "url": "http://danturing.com"
+    "name": "Daniel Turing (modified by Christian Fritz)",
+    "email": "christian@transitiverobotics.com"
   },
-  "main": "./build/Release/gstreamer-superficial",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:dturing/node-gstreamer-superficial.git"
-  },
+  "main": "index.js",
   "maintainers": [],
   "contributors": [
     {
@@ -71,8 +66,5 @@
   },
   "gypfile": true,
   "readmeFilename": "README.md",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dturing/node-gstreamer-superficial/issues"
-  }
+  "license": "MIT"
 }
