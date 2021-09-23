@@ -20,9 +20,9 @@
 				'<!@(env PKG_CONFIG_SYSROOT_DIR=/home pkg-config gstreamer-video-1.0 --cflags-only-I | sed s/-I//g)'
 			],
 			"libraries": [
-				'<!@(pkg-config gstreamer-1.0 --libs | sed s/-lglib[^\b]*//)',
-				'<!@(pkg-config gstreamer-app-1.0 --libs | sed s/-lglib[^\b]*//)',
-				'<!@(pkg-config gstreamer-video-1.0 --libs | sed s/-lglib[^\b]*//)'
+				'<!@(pkg-config gstreamer-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)',
+				'<!@(pkg-config gstreamer-app-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)',
+				'<!@(pkg-config gstreamer-video-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)'
 			]
 		}],
 		["OS=='mac'", {
