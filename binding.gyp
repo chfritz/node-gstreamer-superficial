@@ -22,8 +22,9 @@
 			"libraries": [
 				'<!@(pkg-config gstreamer-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)',
 				'<!@(pkg-config gstreamer-app-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)',
-				'<!@(pkg-config gstreamer-video-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)'
-			]
+				'<!@(pkg-config gstreamer-video-1.0 --libs | sed s/-lglib[^\b]*// | sed s/-lgobject[^\b]*//)',
+                '-L <!(echo -n $HOME)/.transitive/usr/lib/x86_64-linux-gnu'
+            ]
 		}],
 		["OS=='mac'", {
 			"include_dirs": [

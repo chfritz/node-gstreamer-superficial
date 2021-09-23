@@ -1,6 +1,6 @@
 {
   "name": "gstreamer-superficial-transitive",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Superficial GStreamer binding; modified for use by Transitive Robotics",
   "author": {
     "name": "Daniel Turing (modified by Christian Fritz)",
