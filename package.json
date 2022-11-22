@@ -1,6 +1,6 @@
 {
-  "name": "gstreamer-superficial",
-  "version": "1.7.4",
+  "name": "gstreamer-superficial-cf",
+  "version": "1.8.0",
   "description": "Superficial GStreamer binding",
   "author": {
     "name": "Daniel Turing",
@@ -10,7 +10,7 @@
   "main": "./build/Release/gstreamer-superficial",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dturing/node-gstreamer-superficial.git"
+    "url": "git@github.com:chfritz/node-gstreamer-superficial.git"
   },
   "maintainers": [],
   "contributors": [

@@ -1,3 +1,6 @@
+> Note: This is a fork from https://github.com/dturing/node-gstreamer-superficial that adds a new method `getPad` that case be used to get pads and change their properties at pipeline play-time. See https://github.com/dturing/node-gstreamer-superficial/pull/56 for details. The plan is to delete this fork and published package when the above PR is merged into upstream and a new version of the package is released.
+
+
 # gstreamer-superficial
 
 Superficial GStreamer binding
@@ -12,7 +15,7 @@ This is a superficial binding of GStreamer to Node.js. It does not attempt at be
 const gstreamer = require('gstreamer-superficial');
 const pipeline = new gstreamer.Pipeline(`videotestsrc ! textoverlay name=text
 	! autovideosink`);
-	
+
 pipeline.play();
 ```
 
@@ -23,7 +26,7 @@ const target = pipeline.findChild('text');
 
 target.text = 'Hello';
 Object.assign(target.text, {
-	text: 'Hello', 
+	text: 'Hello',
 	'font-desc': 'Helvetica 32',
 })
 ```
@@ -31,7 +34,7 @@ Object.assign(target.text, {
 (see also _examples/basic-pipeline.js_)
 
 Pipeline also knows `.stop()`, `.pause()` and `.pollBus()`,
-the elements returned by `.findChild()` getting and setting all properties the real [`GObject`](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html)s do, appsinks also support `.pull()` (see below). 
+the elements returned by `.findChild()` getting and setting all properties the real [`GObject`](https://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html)s do, appsinks also support `.pull()` (see below).
 
 ### Seeking and Querying Position and Duration
 
@@ -82,14 +85,14 @@ appsink.pull(onData);
 
 ### A simple Ogg/Theora streaming server
 
-should be working as implemented in _examples/streaming/_  
+should be working as implemented in _examples/streaming/_
 run server.js (requires express) and point your browser to http://localhost:8001. (Tested only with Chromium).
 This handles retaining the streamheader to feed first to every newly connected client.
 
 
 ## Who?
 
-gstreamer-superficial was originally written by Daniel Turing, and has 
+gstreamer-superficial was originally written by Daniel Turing, and has
 received contributions from various individuals as seen on github and
 in package.json.
 
